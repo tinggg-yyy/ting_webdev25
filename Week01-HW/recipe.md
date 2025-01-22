@@ -3,6 +3,7 @@
 
 This is a description of my recipe for Sweet and Sour Ribs.
 
+### Ingredient
 - Pork Ribs
 - Sugar
 - Vinegar
@@ -12,6 +13,7 @@ This is a description of my recipe for Sweet and Sour Ribs.
 - Ginger
 - Scallions
 
+### Instruction
 1. Blanch the ribs for 3 minutes.
 2. Braise the ribs for 50 minutes.
 3. Thicken the sauce with high heat.
