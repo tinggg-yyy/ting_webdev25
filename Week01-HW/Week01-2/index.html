@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- this specifies the character set encoding.
+     without this tag our fonts might not load properly -->
+    <meta charset="utf-8" />
+    <!-- the viewport tag sets the initial scale and ensures
+     proper responsive behavior -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The title tag shows up in the browser tab and as the big blue link in search results -->
+    <title>HTML 101</title>
+    <style>
+    /* Internal Style sheet */
+    img{
+        width:100%;
+    }
+
+    p{
+        color: chartreuse
+    }
+    </style>
+  </head>
+  <body>
+    <!-- everything inside the body tag shows up to the user unless
+     modified to not be visible with css -->
+
+    <!-- ONLY 1 H1 per page -->
+    <h1 id="top">Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- horizontal rule aka page divider-->
+    <hr />
+    <!-- Most text on your page will likely be in a p tag-->
+
+    <p>
+        <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</em> Curabitur ac risus felis. Sed at urna in velit aliquet luctus. Aliquam nec nisl in tortor consequat blandit et vel mauris. <br />Aliquam erat volutpat. Donec dapibus sit amet elit quis imperdiet. <strong>Nulla</strong> egestas magna vel tortor elementum gravida. Donec tempor metus non pulvinar vestibulum. Aliquam nec mi nulla. Sed at consequat velit, sed suscipit arcu. Maecenas ex velit, vestibulum pulvinar ullamcorper quis, congue vitae nisi. Donec viverra ligula eros, dapibus tristique ex viverra eget. Vivamus sit amet lectus sit amet tortor elementum rutrum sit amet eu lacus. Integer in nisi nisl.
+    </p>
+    <p>
+        Pellentesque in scelerisque nunc. Mauris ligula lorem, egestas in rutrum sit amet, aliquet vel dui. Integer pretium sem nec ante dignissim, eget tristique lectus molestie. 
+        <a 
+        href="https://github.com/tinggg-yyy/ting_webdev25/tree/main"
+        target = "_blank">Donec suscipit nunc arcu, vel vehicula quam sagittis non.
+    </a> Nullam imperdiet finibus urna, a finibus urna sollicitudin non. Curabitur faucibus felis ac convallis vehicula. Aliquam tempor leo id nibh vestibulum ullamcorper. Etiam nibh erat, mattis vulputate felis tristique, fermentum posuere massa. Pellentesque metus neque, scelerisque et fringilla in, vehicula ut nunc. Mauris dictum erat ante, vitae porttitor odio laoreet eu. Vestibulum commodo eget tellus sit amet lobortis. Aenean sed posuere nulla. Praesent laoreet eros turpis, id venenatis ante euismod id. Praesent tristique vel ante egestas bibendum.
+</p>
+<p>
+Curabitur ultricies semper sodales. Integer et turpis elementum, blandit tellus vitae, congue ligula. 
+<span style="color:red; font-size: 20px"
+>Maecenas ultricies, leo ac finibus finibus, nibh est dignissim nisl, sit amet rutrum arcu libero eu purus.</span
+> Fusce finibus scelerisque laoreet. Sed tempor auctor mauris, nec euismod risus volutpat ac. Pellentesque a ligula molestie leo aliquam vehicula. Aliquam auctor dapibus velit non semper.
+ </p>
+ <hr />
+ <h2>Sweet and Sour Ribs</h2>
+ <!-- An image sourced from another site on the web-->
+ <img src="https://p8.itc.cn/images01/20211016/605d958778c24f95a97a8b7e1b4bb138.jpeg"
+ alt="A bowl of tasty sweet and sour ribs" 
+style="width:15%">
+ <!-- An image loaded from a file that is a sibling of the html file-->
+  <img src="sweet_and_sour_ribs.jpeg"alt="sweet and sour ribs">
+<!-- An image loaded form a subfolder with in the same project-->
+ <img src="img/ribs_with_scallions.jpeg"alt="ribs with scallions" />
+
+ <p>This is a description of my recipe for Sweet and Sour Ribs.</p>
+<!-- UL = unordered list, bulleted -->
+ <ul>
+    <li><a href ="#">Pork Ribs</a></li>
+    <li>Sugar</li>
+    <li>Vinegar</li>
+    <li>Soy Sauce
+        <ol>
+            <li>Light</li>
+            <li>Dark</li>
+        </ol>
+    </li>
+    <li>Garlic</li>
+    <li>Ginger</li>
+    <li>Scallions</li>
+</ul>
+<!-- OL = ordered list order/numbering matters -->
+<ol>
+<li>Blanch the ribs for 3 minutes.</li>
+<li>Braise the ribs for 50 minutes.</li>
+<li>Thicken the sauce with high heat.</li>
+<li>Sprinkle chopped scallions over the ribs.</li>
+<li>Eat it.</li>
+</ol>
+
+<!-- link to another page within your own site/project -->
+ <a href="about/index.html">Go To About Page</a>
+<!-- Link to elements on the same page-->
+ <a href="#top">Back to Top</a>
+</body>
+</html>
