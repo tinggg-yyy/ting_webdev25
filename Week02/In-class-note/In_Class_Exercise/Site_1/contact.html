@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Us Site 1</title>
+    <meta name="description" content="Method 1 - Page Names in File Name" />
+  </head>
+
+  <body>
+    <!-- Place your Nav Links Here -->
+    <nav>
+      <!-- use UL LI and A for Nav Links within our NAV tag -->
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Contact Us</h1>
+    <!-- Bonus - Place Images Here -->
+    <img
+      src="./img/chicken3.jpeg"
+      alt="handsome rooster"
+      style="width: 100%"
+    />
+    <!-- Double Bonus - Make a Contact Form -->
+     <form name="contact" method="POST">
+      <fieldset>
+        <legend>Contact Form</legend>
+        <label for="first-name">First Name</label>
+        <input name="first-name" type="text" />
+        <label for="last-name">Last Name</label>
+        <input
+          name="last-name"
+          type="text"
+          maxlength="10"
+          placeholder="Smith"
+          required
+        />
+        <label for="phone-number">Phone Number</label>
+        <input name="phone-number" type="tel" maxlength="10"/>
+
+      </fieldset>
+  </body>
+</html>
