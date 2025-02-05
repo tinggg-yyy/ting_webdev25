@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intro to CSS Text and Spans</title>
+    <!-- internal style sheet-->
+    <style type="text/CSS">
+      /* Universal Selector, this is good for general resets or defaults you will override later on */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* tag/element/type selector applies to every instance of that tag unless overwritten further down */
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+
+      h1 {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        /* we can call out box properties each side at a time*/
+        margin-top: 24px;
+        /* 2 values = top/bottom & left/right */
+        margin: 2rem 1rem;
+        /* 4 values = top > right > bottom > left think of a clock face and clockwise */
+        margin: 1rem 2rem 3rem 4rem;
+        /* Border shorthand: width style color*/
+        border: 2px dashed green;
+        border-width: 2px 2px 2px 2px;
+        border-radius: 10px;
+        /* padding   = space between the border aka edge of the box and the content */
+        padding: 1rem;
+      }
+
+      p {
+        font-size: 19px;
+        margin: 1.5rem 0;
+        line-height: 30px;
+      }
+
+      /* class selectors start with. in our css and need to be applied with the class attribute in our HTML */
+      .crazy-text {
+        font-family: fantasy;
+        color: rgb(100, 200, 100);
+        text-transform: uppercase;
+        /* x offset, y offset, blur, color */
+        text-shadow: 5px 5px 10px yellow;
+      }
+
+      /* ID selectors are for one unique element per HTML file */
+      #CallToAction {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nicolas Cage is a Shamanic Thespian!</h1>
+    <p id="CallToAction">
+      He makes like 8 movies a yeaer, some are award-winning, some are
+      unwatchable and go straghit to streaming, and some are that good kind of
+      bad.
+    </p>
+    <p>
+      He actually won an Oscar for Best Actor. He likes to remind us of this.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet
+      orci velit. Vivamus efficitur volutpat aliquet.
+      <span class="crazy-text"
+        >In euismod blandit interdum. Donec sed vestibulum nulla. Mauris quam
+        felis, condimentum nec sem in, condimentum tempus nisi. Orci varius
+        natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quis justo mauris.</span
+      >
+      Integer volutpat felis nec laoreet maximus. Pellentesque fringilla, ipsum
+      sit amet sollicitudin venenatis, neque lorem faucibus mauris, non bibendum
+      odio dui a mi. Morbi dignissim fermentum condimentum.
+    </p>
+  </body>
+</html>
