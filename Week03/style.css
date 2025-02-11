@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: fantasy;
+  color: rgb(75, 67, 54);
+}
+header {
+  background-color: cornsilk;
+  width: 100%;
+  padding: 0px 5px 0px 5px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: inline-block;
+}
+img {
+  width: 65%;
+}
+aside {
+  background-color: rgb(255, 240, 220);
+  width: 25%;
+  padding: 2px 5px 2px 5px;
+  position: fixed;
+  z-index: 10;
+  top: 20%;
+}
+main {
+  background-color: rgb(255, 236, 220);
+  width: 65%;
+  padding: 5px 5px 5px 5px;
+  position: relative;
+  left: 30%;
+  margin-top: 10%;
+}
+footer {
+  background-color: rgb(255, 230, 220);
+  width: 100%;
+  margin: 20px 0 0 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+nav a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+  /* remove default a style */
+  text-decoration: none;
+  color: rgb(75, 67, 54);
+}
+
+nav a:hover {
+  background-color: rgba(41, 18, 2, 0.2);
+  color: rgba(250, 246, 232, 0.929);
+}
+
+nav#category ul {
+  /* remove bullet points */
+  list-style-type: none;
+  overflow: hidden;
+  /* when we are about to use inline-block, we make the parent element's font size 0*/
+  font-size: 0;
+}
+nav#category li {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+section {
+  position: relative;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 5%;
+  vertical-align: text-top;
+  width: 32.5%;
+}
