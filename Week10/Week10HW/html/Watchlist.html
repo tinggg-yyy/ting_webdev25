@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScreenDiary</title>
+    <link rel="stylesheet" href="../css/Watchlist.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script type="text/javascript" src="../js/Watchlist.js" defer></script>
+    <script>
+      // Thumb objects
+      const thumbs = [
+        {
+          title: "The White Lotus 1",
+          category: "WATCHED",
+          rating: 5,
+          image: "../img/whitelotus1.jpg",
+        },
+        {
+          title: "The White Lotus 2",
+          category: "WATCHED",
+          rating: 4,
+          image: "../img/whitelotus2.jpg",
+        },
+        {
+          title: "The White Lotus 3",
+          category: "WATCHED",
+          rating: 3,
+          image: "../img/whitelotus3.jpg",
+        },
+        {
+          title: "Sakamoto Days",
+          category: "WATCHING",
+          rating: 4,
+          image: "../img/SakamotoDays.jpg",
+        },
+        {
+          title: "Dandadan",
+          category: "TO-WATCH",
+          rating: 0,
+          image: "../img/dandadan.jpg",
+        },
+        {
+          title: "Delicious In Dungeon",
+          category: "WATCHED",
+          rating: 5,
+          image: "../img/DeliciousInDungeon.jpg",
+        },
+      ];
+
+      // generate thumbs
+      function renderThumbs(filterCategory = "ALL") {
+        const container = document.getElementById("thumb-container");
+        container.innerHTML = ""; // clear container
+
+        // filter thumbs based on category
+        const filteredThumbs = thumbs.filter(
+          (thumb) =>
+            filterCategory === "ALL" || thumb.category === filterCategory
+        );
+
+        // generate html for each thumb
+        filteredThumbs.forEach((thumb) => {
+          const thumbHTML = `
+            <div class="thumb" data-title="${thumb.title}" data-category="${
+            thumb.category
+          }">
+              <div class="content-row">
+                <img src="${thumb.image}" alt="poster" />
+                <article class="description">
+                  <h3 id="filmtitle"><a href="#">${thumb.title}</a></h3>
+                  <div class="stars">${generateStars(thumb.rating)}</div>
+                </article>
+              </div>
+            </div>
+          `;
+          container.innerHTML += thumbHTML;
+        });
+      }
+
+      // generate stars
+      function generateStars(rating) {
+        let starsHTML = "";
+        for (let i = 0; i < 5; i++) {
+          starsHTML += `<span class="fa fa-star ${
+            i < rating ? "checked" : ""
+          }"></span>`;
+        }
+        return starsHTML;
+      }
+
+      // searchfunction
+      function searchFunction() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toUpperCase();
+        const filteredThumbs = thumbs.filter((thumb) =>
+          thumb.title.toUpperCase().includes(filter)
+        );
+        renderThumbsFromArray(filteredThumbs);
+      }
+
+      // render thumbs from array
+      function renderThumbsFromArray(filteredThumbs) {
+        const container = document.getElementById("thumb-container");
+        container.innerHTML = ""; // clear container
+
+        filteredThumbs.forEach((thumb) => {
+          const thumbHTML = `
+            <div class="thumb" data-title="${thumb.title}" data-category="${
+            thumb.category
+          }">
+              <div class="content-row">
+                <img src="${thumb.image}" alt="poster" />
+                <article class="description">
+                  <h3 id="filmtitle"><a href="#">${thumb.title}</a></h3>
+                  <div class="stars">${generateStars(thumb.rating)}</div>
+                </article>
+              </div>
+            </div>
+          `;
+          container.innerHTML += thumbHTML;
+        });
+      }
+
+      // render Thumbs initially
+      document.addEventListener("DOMContentLoaded", () => {
+        renderThumbs(); // show all thumbs initially
+      });
+
+      // filter category
+      function filterThumbs(category) {
+        renderThumbs(category);
+      }
+    </script>
+  </head>
+
+  <body id="tech">
+    <!-- Header -->
+    <header>
+      <span class="mobile-menu" id="hamburger"> &#8801; </span>
+      <nav id="main-nav">
+        <ul class="menu">
+          <li><a href="./About.html">ABOUT</a></li>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="./Watchlist.html">WATCHLIST</a></li>
+        </ul>
+      </nav>
+      <h1 class="title">WATCHLIST</h1>
+    </header>
+
+    <!-- Sub Navigation -->
+    <nav id="sub-nav">
+      <ul class="sub-menu">
+        <li><a href="#" onclick="filterThumbs('ALL')">ALL</a></li>
+        <li><a href="#" onclick="filterThumbs('WATCHED')">WATCHED</a></li>
+        <li><a href="#" onclick="filterThumbs('WATCHING')">WATCHING</a></li>
+        <li><a href="#" onclick="filterThumbs('TO-WATCH')">TO-WATCH</a></li>
+        <input
+          type="text"
+          id="searchInput"
+          onkeyup="searchFunction()"
+          placeholder="Search.."
+        />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container" id="thumb-container"></div>
+
+    <footer>
+      <p>© 2025 · Ting's ScreenDiary · All Rights Reserved</p>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/tinggg_studio/"
+              ><i style="font-size: 24px" class="fa">&#xf16d;</i></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
