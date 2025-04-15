@@ -1,0 +1,1 @@
+I rewrote the function to store and arrange the thumb content and created a SEARCH function to dynamically change the content shown on the WATCHLIST page
