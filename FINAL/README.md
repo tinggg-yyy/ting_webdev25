@@ -2,7 +2,7 @@
 https://tinggg-yyy.github.io/Screen_Diary/
 
 ### Updated:
-• Watchlist Page
+* **Watchlist Page**
 - Objects
 - Search Function
 - Filter Function
